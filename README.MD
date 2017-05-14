@@ -66,7 +66,7 @@ export class AppComponent {
 
 ## Forking this library / Cotributing / Development
 
-This plugin was generated using a [yeoman generator] (https://github.com/jvandemo/generator-angular2-library)
+This plugin was generated using a [yeoman generator](https://github.com/jvandemo/generator-angular2-library)
 
 To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
 

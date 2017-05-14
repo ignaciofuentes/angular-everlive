@@ -1,9 +1,9 @@
 {
   "name": "angular-everlive",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/repo"
+    "url": "https://github.com/ignaciofuentes/angular-everlive"
   },
   "author": {
     "name": "Ignacio Fuentes",
@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/username/repo/issues"
+    "url": "https://github.com/ignaciofuentes/angular-everlive/issues"
   },
   "module": "angular-everlive.js",
   "typings": "angular-everlive.d.ts",

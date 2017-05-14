@@ -1,0 +1,29 @@
+{
+  "name": "angular-everlive",
+  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/repo"
+  },
+  "author": {
+    "name": "Ignacio Fuentes",
+    "email": "ignaciofuentes@outlook.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/username/repo/issues"
+  },
+  "module": "angular-everlive.js",
+  "typings": "angular-everlive.d.ts",
+  "dependencies": {
+    "everlive-sdk": "^1.9.4"
+  },
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}

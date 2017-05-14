@@ -41,7 +41,7 @@ export class AppModule {
 }
 ```
 
-Then in the constructors of your Component and Services you can receive an Everlive Singleton objecs.
+Then in the constructors of your Component and Services you can receive an Everlive Singleton object.
 
 ```typescript
 import { Component } from '@angular/core';

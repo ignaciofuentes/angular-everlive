@@ -1,5 +1,8 @@
 # angular-everlive
 
+Angular wrapper for easy consumption of Telerik's everlive-sdk Edit
+
+
 ## Usage
 
 To install this library, run:

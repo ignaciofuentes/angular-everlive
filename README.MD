@@ -1,6 +1,6 @@
 # angular-everlive
 
-Angular wrapper for easy consumption of Telerik's everlive-sdk Edit
+Angular wrapper for easy consumption of Telerik's everlive-sdk
 
 
 ## Usage

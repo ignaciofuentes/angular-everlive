@@ -146,6 +146,11 @@ gulp.task('copy:manifest', function () {
     .pipe(gulp.dest(distFolder));
 });
 
+gulp.task('copy:readme', function () {
+  return gulp.src([`README.MD`])
+    .pipe(gulp.dest(distFolder));
+});
+
 /**
  * 9. Delete /.tmp folder
  */
@@ -170,6 +175,7 @@ gulp.task('compile', function () {
     'rollup:umd',
     'copy:build',
     'copy:manifest',
+    'copy:readme',
     'clean:build',
     'clean:tmp',
     function (err) {

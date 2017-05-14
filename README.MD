@@ -1,6 +1,6 @@
 # angular-everlive
 
-## Installation
+## Usage
 
 To install this library, run:
 
@@ -8,24 +8,21 @@ To install this library, run:
 $ npm install angular-everlive --save
 ```
 
-## Consuming your library
-
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install angular-everlive
-```
-
-and then from your Angular `AppModule`:
+and then from your `AppModule`:
 
 ```typescript
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
-import { SampleModule } from 'angular-everlive';
+// Import the AngularEverliveModule and EverliveConfig interface
+import { AngularEverliveModule, EverliveConfig } from 'angular-everlive';
+
+//Create EverliveConfig object
+const everliveConfig : EverliveConfig  = {
+  appId: "your-app-id",
+  scheme: "https"
+};
 
 @NgModule({
   declarations: [
@@ -33,27 +30,40 @@ import { SampleModule } from 'angular-everlive';
   ],
   imports: [
     BrowserModule,
-
-    // Specify your library as an import
-    LibraryModule
+    AngularEverliveModule.initialize(everliveConfig),
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Then in the constructors of your Component and Services you can receive an Everlive Singleton objecs.
 
-```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+```typescript
+import { Component } from '@angular/core';
+import { Everlive  } from 'angular-everlive';
+import { Observable } from 'rxjs/Observable';
+import "rxjs";
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+
+  constructor(private el: Everlive){
+  }
+}
 ```
 
-## Development
+## Forking this library / Cotributing / Development
+
+This plugin was generated using a [yeoman generator] (https://github.com/jvandemo/generator-angular2-library)
 
 To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
 
